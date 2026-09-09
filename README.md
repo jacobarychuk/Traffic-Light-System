@@ -24,13 +24,31 @@ The following hardware components are used in the system:
   
 * **Shift Registers:** Control traffic flow by extending GPIO outputs
   
-* **STM32 Microcontroller:** Processes all tasks and manages communication
+* **STM32F4DISCOVERY:** Processes all tasks and manages communication
+
+The following diagram illustrates the electrical connections between the STM32F4DISCOVERY development board, potentiometer, LEDs, and shift registers.
+
+<img width="1432" height="838" alt="circuit" src="https://github.com/user-attachments/assets/89d2fbae-7e84-4d36-a07c-03f9ff80fad0" />
+
+Wire Colour Legend:
+
+| Colour | Connection |
+|--------|------------|
+| 🟠 Orange | 5V |
+| ⚫️ Black | GND |
+| 🔴 Red | Red LED |
+| 🟡 Yellow | Yellow LED |
+| 🟢 Green | Green LEDs |
+| 🟣 Purple | Potentiometer Input |
+| 🔵 Blue | Shift Register Data |
+| ⚪️ White | Shift Register Clock |
+| 🟤 Brown | Shift Register Reset |
 
 ## GPIO Configuration
 The system uses GPIOC where the following pins are programmed according to the configuration shown in the table below.
 
 | Pin | Mode | Purpose |
-|-----|--------|----------------------|
+|-----|------|---------|
 | PC0 | Output | Red Light |
 | PC1 | Output | Yellow Light |
 | PC2 | Output | Green Light |
